@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{652D6DE7-A283-4A36-9AD6-092261D90449}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Lab6</RootNamespace>
+    <AssemblyName>Lab6</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>iconfinder_content-form-application-article-paper_3209381.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChooseCell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseCell.Designer.cs">
+      <DependentUpon>ChooseCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diagramm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diagramm.Designer.cs">
+      <DependentUpon>Diagramm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ElementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElementForm.Designer.cs">
+      <DependentUpon>ElementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ScreenSaver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScreenSaver.Designer.cs">
+      <DependentUpon>ScreenSaver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Serializer.cs" />
+    <Compile Include="SerializableElement.cs" />
+    <EmbeddedResource Include="ChooseCell.resx">
+      <DependentUpon>ChooseCell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagramm.resx">
+      <DependentUpon>Diagramm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElementForm.resx">
+      <DependentUpon>ElementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScreenSaver.resx">
+      <DependentUpon>ScreenSaver.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iconfinder_content-form-application-article-paper_3209381.ico" />
+    <None Include="Resources\Ку.png" />
+    <None Include="Resources\1.jpg" />
+    <None Include="Resources\text-file-font.png" />
+    <None Include="Resources\plus-symbol.png" />
+    <None Include="Resources\success.png" />
+    <None Include="Resources\rubbish-bin.png" />
+    <None Include="Resources\growth.png" />
+    <None Include="img\iconfinder_cascade_display_layout_stack_sw_view_392519.png" />
+    <None Include="img\iconfinder_arrow-vertical-direction-path-way_3209405.png" />
+    <None Include="img\iconfinder_arrow-horizontal-direction-path-way_3209404.png" />
+    <None Include="img\writing.png" />
+    <None Include="img\page.png" />
+    <None Include="img\iconfinder_158-Save_2123968.png" />
+    <None Include="img\iconfinder_15_2134065.png" />
+    <None Include="img\iconfinder_15_2064785.png" />
+    <None Include="img\iconfinder_09_2064824.png" />
+    <None Include="img\edit.png" />
+    <None Include="img\archives.png" />
+    <None Include="img\ScreenSaver.jpeg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
